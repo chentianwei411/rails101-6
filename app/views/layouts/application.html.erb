@@ -9,6 +9,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= render :partial => "common/navbar"%>
+      <%= yield%>
+    </div>
+
+    <%= render :partial => "common/footer"%>
   </body>
 </html>
