@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     if @group.update(group_params)
       flash[:notice] = "变更成功"
-      redirect_to group_path(@group)
+      redirect_to groups_path
     else
       render :edit
     end
