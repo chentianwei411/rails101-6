@@ -1,4 +1,4 @@
-<%= form_for @group do |f| %>
+<!-- <%= form_for @group do |f| %>
 
   <% if @group.errors.any? %>
     <ul>
@@ -15,4 +15,11 @@
   <%= f.text_area :description %>
   <br>
   <%= f.submit "提交", :dsiable_with => "submiting..."%>
+<% end %> -->
+<%= simple_form_for @group, defaults:{ input_html:{class:'form_control'}} do |f| %>
+  <div class="form-group">
+    <%= f.input :title %>
+    <%= f.input :description%>
+  </div>
+  <%= f.submit '提交', class: "btn btn-primary", data: {disable_with: "Submiting..."}%>
 <% end %>
